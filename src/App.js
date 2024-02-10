@@ -1,6 +1,7 @@
 import Header from "./components/template/Header";
 import SideNavigation from "./components/template/SideNavigation";
 import { Col, Row } from "reactstrap";
+import Footer from "./components/template/Footer";
 
 function App() {
   const styles = {
@@ -22,8 +23,8 @@ function App() {
 
       <div style={styles.contentDiv}>
         <SideNavigation></SideNavigation>
- 
-      </div>
+       </div>
+       <Footer />
     </>
   );
 }
