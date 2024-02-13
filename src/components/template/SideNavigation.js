@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaAd, FaAt, FaGamepad, FaGem, FaHeart } from "react-icons/fa";
+import { FaGem, FaHeart } from "react-icons/fa";
 import {
   Menu,
   MenuItem,
@@ -12,6 +12,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import RouteRoster from "../pages/RouteRoster";
 
 const SideNavigation = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -45,7 +46,7 @@ const SideNavigation = () => {
           <Link to="/Login">Login</Link>
           </MenuItem>
           <SubMenu title="Reports" icon={<FaHeart />}>
-            <MenuItem>Track Report</MenuItem>
+            <MenuItem> <Link to="/Route-Roster">RouteRoster</Link></MenuItem>
             <MenuItem>Inventory Report</MenuItem>
             <MenuItem>Customer Report</MenuItem>
           </SubMenu>
@@ -61,6 +62,7 @@ const SideNavigation = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Route-Roster" element={<RouteRoster/>} />
       </Routes>
     </Router>
   );
